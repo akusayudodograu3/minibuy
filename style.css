@@ -1,0 +1,155 @@
+/* --- ESTILOS DA TELA DE CARREGAMENTO --- */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0d0d0d;
+    /* USA A MESMA IMAGEM DE FUNDO DO SITE */
+    background-image: url('https://cdn.discordapp.com/attachments/1392883365321117727/1393356634872483950/image.png?ex=6872dffd&is=68718e7d&hm=d7edd8edbd6a7f0495d274e661d67e6fd05a7b5c59855729f5ee3e9f76eab7ed&');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Garante que fique por cima de tudo */
+    transition: opacity 1s ease-out; /* Animação de desaparecimento */
+    opacity: 1; /* Começa visível */
+}
+
+/* ESTILO DA LOGO "MB" */
+.loading-logo {
+    width: 90px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid #ffffff;
+    border-radius: 50%; /* Círculo perfeito */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    animation: pulse 1.8s infinite ease-in-out;
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+/* --- ESTILOS DO SITE PRINCIPAL --- */
+body {
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    text-align: center;
+    background-image: url('https://cdn.discordapp.com/attachments/1392883365321117727/1393356634872483950/image.png?ex=6872dffd&is=68718e7d&hm=d7edd8edbd6a7f0495d274e661d67e6fd05a7b5c59855729f5ee3e9f76eab7ed&');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    gap: 35px;
+    background-color: rgba(13, 13, 13, 0.85);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.description {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #c0c0c0;
+    max-width: 550px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 3px solid #5865F2;
+}
+
+.btn-discord {
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform-style: preserve-3d;
+    background-color: #5865F2;
+    color: #ffffff;
+}
+
+.btn-discord .btn-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translateZ(20px);
+}
+
+.btn-discord::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 0;
+}
+
+.btn-discord:hover {
+    transform: perspective(1200px) rotateX(8deg) rotateY(-4deg) scale(1.1);
+    background-color: #6975f5;
+    box-shadow: 0 10px 25px rgba(88, 101, 242, 0.5);
+}
+
+.btn-discord:hover::before {
+    left: 100%;
+}
+
+.btn-discord:hover .btn-content {
+    transform: translateZ(35px) translateY(-1px);
+}
+
+.btn-discord:active {
+    transform: perspective(1200px) scale(1.05);
+    transition: transform 0.1s ease;
+}
+
+.discord-logo {
+    width: 22px;
+    height: auto;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Buy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="loading-screen">
+        <div class="loading-logo">MB</div>
+    </div>
+
+    <main class="container">
+        
+        <div class="cta-buttons">
+            <a href="https://discord.gg/SBkRv6Jw" target="_blank" rel="noopener noreferrer" class="btn btn-discord">
+                <span class="btn-content">
+                    <svg class="discord-logo" width="24" height="24" viewBox="0 0 96 73" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M83.0346 10.322C76.8833 7.63214 70.3683 5.47543 63.6366 3.93143C62.7303 5.54143 61.8593 7.11571 61.0236 8.65964C55.0346 7.11571 48.9169 7.11571 43.0279 8.65964C42.157 7.11571 41.2859 5.54143 40.38 3.93143C33.6482 5.47543 27.1332 7.63214 20.982 10.322C14.0132 23.4983 12.3364 36.3533 14.9307 48.914C21.6922 53.6669 28.2425 57.1783 34.6975 59.6054C36.7761 57.734 38.6022 55.6783 40.1758 53.4754C37.5461 52.6183 35.0346 51.614 32.7402 50.4626C33.1039 50.2054 33.4675 49.9483 33.8311 49.6911C48.7118 55.1297 61.8946 55.1297 76.5169 49.6911C76.8806 49.9483 77.2442 50.2054 77.6078 50.4626C75.3134 51.614 72.8019 52.6183 70.1722 53.4754C71.7457 55.6783 73.5718 57.734 75.6504 59.6054C82.1054 57.1783 88.6557 53.6669 95.4172 48.914C98.4286 34.8483 96.4672 21.657 83.0346 10.322ZM51.5818 40.3626C48.1691 40.3626 45.3875 37.1554 45.3875 33.2283C45.3875 29.3011 48.1338 26.094 51.5818 26.094C55.0298 26.094 57.8114 29.3011 57.7761 33.2283C57.7761 37.1554 55.0298 40.3626 51.5818 40.3626ZM70.8993 40.3626C67.4866 40.3626 64.705 37.1554 64.705 33.2283C64.705 29.3011 67.4513 26.094 70.8993 26.094C74.3473 26.094 77.1289 29.3011 77.0936 33.2283C77.0936 37.1554 74.3473 40.3626 70.8993 40.3626Z" fill="white"/></svg>
+                    <span>entre em nosso discord</span>
+                </span>
+            </a>
+        </div>
+
+        <p class="description">
+            Quer a melhor loja do roblox?<br><br>
+            Mini Buy, aqui vendemos varias coisas em jogos, como:<br><br>
+            • Steal A Brainrot<br>
+            • Blox Fruits<br>
+            • Grow A Garden<br>
+            • Mini City<br>
+            • Sneak Simulator<br>
+            • America PvP<br><br>
+            E muito mais! venha para mini buy clicando no botão!!!
+        </p>
+    </main>
+
+    <script>
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            // Define um tempo de 2.5 segundos para a tela de carregamento
+            setTimeout(function() {
+                loadingScreen.style.opacity = '0';
+                // Esconde a tela após a animação de opacidade terminar
+                setTimeout(function() {
+                    loadingScreen.style.display = 'none';
+                }, 1000); 
+            }, 2500);
+        });
+    </script>
+</body>
+</html>
